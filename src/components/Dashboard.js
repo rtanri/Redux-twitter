@@ -6,7 +6,18 @@ class Dashboard extends Component {
         console.log(this.props)
         return (
             <div>
-               Dashboard 
+               <h3 className='center'>Your Timeline</h3>
+               <ul className='dashboard-list'>
+                   {this.props.tweetIds.map((id) => (
+                       <li key={id}>
+                           <div>TWEET ID: {id}</div>
+
+                       </li>
+
+                   ))}
+
+
+               </ul>
             </div>
         )
     }
@@ -19,4 +30,4 @@ function mapStateToProps({ tweets }) {
     }
 }
 
-export default Dashboard
+export default connect(mapStateToProps)(Dashboard)
