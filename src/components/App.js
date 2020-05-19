@@ -17,4 +17,11 @@ class App extends Component {
   }
 }
 
+function mapStateToProps ({authedUser}) {
+  return {
+    loading: authedUser === null
+    //If the authedUser is null, then we will render null instead of <Dashboard/>
+  }
+}
+
 export default connect()(App)
