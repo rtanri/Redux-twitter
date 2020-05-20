@@ -28,13 +28,3 @@ function mapStateToProps({tweets}){
 }
     
 export default connect(mapStateToProps)(Dashboard)
-
-
-// function mapStateToProps({ tweets }) {
-//     return {
-//         tweetIds: Object.keys(tweets)
-//         .sort((a,b) => tweets[b].timestamp - tweets[a].timestamp)
-//     }
-// }
-
-// export default connect(mapStateToProps)(Dashboard)
