@@ -20,7 +20,7 @@ class Tweet extends Component {
         } = tweet
 
         return(
-            <div className="tweet">
+            <div className='tweet'>
                 <img
                     src={avatar}
                     alt={`Avatar of ${name}`}
@@ -36,6 +36,7 @@ class Tweet extends Component {
                     )}
                     <p>{text}</p>
                 </div>
+            
             </div>
         )
     }
