@@ -1,4 +1,4 @@
-import {RECEIVE_TWEETS} from '../actions/tweets'
+import {RECEIVE_TWEETS, TOGGLE_TWEETS} from '../actions/tweets'
 
 export default function users (state ={}, action) {
     switch(action.type) {
@@ -7,7 +7,7 @@ export default function users (state ={}, action) {
                 ...state, 
                 ...action.tweets
             }
-        case TOGGLE_TWEET :
+        case TOGGLE_TWEETS:
             return {
                 ...state,
                 [action.id]: {
