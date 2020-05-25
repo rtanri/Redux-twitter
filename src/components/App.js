@@ -19,7 +19,9 @@ class App extends Component {
         <div>
             <LoadingBar />
             {this.props.loading === true ? null 
-            : <TweetPage match={{params: {id: '8xf0y6ziyjabvozdd253nd'}}} /> }
+            : <div>
+              <Route path='/' exact component={Dashboard} />
+            </div>
         </div>
       </Router>
     )
