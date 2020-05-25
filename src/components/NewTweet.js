@@ -7,8 +7,14 @@ class NewTweet extends Component {
     
     handleChange = (e) => {
         const text = e.target.value,
-
         this.setState(() => ( {text} ))
+    }
+
+    handleSubmit = (e) => {
+        const {text} = this.state
+        // todo: add New Tweet into the store
+        console.log('New Tweet: ', text)
+        this.setState(()=> ( {text:''} ))
     }
 
     render() {
@@ -24,8 +30,14 @@ class NewTweet extends Component {
                         onChange={this.handleChange}
                         className="textarea"
                         maxLength={280}
-                />
-
+                    />
+                <button
+                    className='btn'
+                    type='submit'
+                    disabled={text===''} >
+                    Submit
+                </button>
+            </form>
             
             </div>
         )
