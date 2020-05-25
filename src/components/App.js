@@ -15,11 +15,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <LoadingBar />
-        {this.props.loading === true ? null 
-        : <TweetPage match={{params: {id: '8xf0y6ziyjabvozdd253nd'}}} /> }
-      </div>
+      <Router>
+        <div>
+            <LoadingBar />
+            {this.props.loading === true ? null 
+            : <TweetPage match={{params: {id: '8xf0y6ziyjabvozdd253nd'}}} /> }
+        </div>
+      </Router>
     )
   }
 }
