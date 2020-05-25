@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { formatTweet, formatDate } from '../utils/helpers'
 import { TiArrowBackOutline, TiHeartOutline, TiHeartFullOutline} from 'react-icons/ti/index'
 import { handleToggleTweet } from '../actions/tweets'
+import {Link} from 'react-router-dom'
 
 class Tweet extends Component {
     handleLike =(e) => {
@@ -32,7 +33,7 @@ class Tweet extends Component {
         } = tweet
 
         return(
-            <div className='tweet'>
+            <Link to={`/tweet/${id}`} className='tweet'>
                 <img
                     src={avatar}
                     alt={`Avatar of ${name}`}
@@ -62,7 +63,7 @@ class Tweet extends Component {
                     </div>
                 </div>
             
-            </div>
+            </Link>
         )
     }
 }
