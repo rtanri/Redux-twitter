@@ -25,6 +25,7 @@ class NewTweet extends Component {
 
         // todo: Redirect to / if submited
 
+
         const tweetLeft = 280 - text.Length
 
         return(

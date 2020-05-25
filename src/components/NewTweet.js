@@ -12,8 +12,22 @@ class NewTweet extends Component {
     }
 
     render() {
-        return (
+        const {text} = this.props
 
+        return (
+            <div>
+                <h3 className='center'>Compose New Tweet</h3>
+                <form className='new-tweet' onSubmit>
+                    <textarea 
+                        placeholder="What's happening?"
+                        value={text}
+                        onChange={this.handleChange}
+                        className="textarea"
+                        maxLength={280}
+                />
+
+            
+            </div>
         )
     }
 }
