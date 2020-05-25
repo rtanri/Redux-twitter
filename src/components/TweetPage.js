@@ -8,8 +8,16 @@ class TweetPage extends Component {
         const {id, replies} = this.props
         return(
             <div>
-                Hello World
-                
+                <Tweet id={id} />
+                <NewTweet id={id}/>
+                {replies.length !== 0 && <h3 className='center'>Replies</h3>}
+                <ul>
+                    {replies.map((replyId) => (
+                        <li key={replyId}>
+                            <Tweet id={replyId} />
+                        </li>
+                    ))}
+                </ul>
             </div>
         )
     }
