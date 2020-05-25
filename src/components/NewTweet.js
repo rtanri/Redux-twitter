@@ -17,9 +17,10 @@ class NewTweet extends Component {
         e.preventDefault()
 
         const {text} = this.state
+        const {dispatch, id} = this.props
+        
+        dispatch(handleAddTweet(text, id))
 
-        // todo: add New Tweet into the store
-        console.log('New Tweet: ', text)
         this.setState(()=> ( {text:''} ))
     }
 
@@ -56,4 +57,4 @@ class NewTweet extends Component {
     }
 }
 
-export default NewTweet
+export default connect ()(NewTweet)
